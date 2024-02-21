@@ -13,3 +13,4 @@ def index():
 def test_openai():
     # Appelez la fonction chat_completion et affichez le résultat dans la réponse de la requête
     return str(chat_completion)
+
