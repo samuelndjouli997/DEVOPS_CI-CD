@@ -2,7 +2,6 @@ from flask import Flask, render_template, jsonify
 from services.generate_quizz import generate_quiz
 from services.openai import chat_completion
 from dotenv import load_dotenv
-import os
 
 app = Flask(__name__)
 
