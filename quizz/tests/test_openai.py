@@ -2,12 +2,10 @@ import os
 from dotenv import load_dotenv
 import unittest
 from unittest.mock import patch
-from openai import OpenAI
 from services.openai import OpenAI
 
 load_dotenv()
 
-#mock
 
 def generate_chat_completion():
     client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
@@ -19,6 +17,7 @@ def generate_chat_completion():
     )
     return chat_completion.choices[0]['message']['content']
 
+
 class TestGenerateChatCompletion(unittest.TestCase):
 
     @patch('openai.OpenAI')
@@ -26,12 +25,22 @@ class TestGenerateChatCompletion(unittest.TestCase):
         mock_client = mock_openai.return_value
         mock_client.chat.completions.create.return_value = {
             "choices": [
-                {"message": {"content": "That's great to hear! I'm here to help you with anything you need."}}
+                {
+                    "message": {
+                        "content": "That's great to hear!"
+                        "I'm here to help you with anything you need."
+                    }
+                }
             ]
         }
 
         result = generate_chat_completion()
-        self.assertEqual(result, "That's great to hear! I'm here to help you with anything you need.")
+        self.assertEqual(
+            result,
+            "That's great to hear!"
+            "I'm here to help you with anything you need."
+            )
+
 
 if __name__ == '__main__':
     unittest.main()
