@@ -11,6 +11,82 @@
     />
   </head>
   <body>
-    <h1 class="text-blue-600 flex justify-center">Hello, Flask!</h1>
+    <main>
+      <section class="bg-slate-100 h-screen">
+        <div
+          class="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl"
+        >
+          <h1 class="text-4xl font-bold leadi sm:text-5xl">
+            Choisissez votre <span class="text-blue-500">sujet</span>
+          </h1>
+          <p class="px-8 mt-8 mb-12 text-lg">
+            Sélectionnez un sujet pour commencer à apprendre et à vous améliorer
+          </p>
+          <div class="flex flex-col justify-center">
+            <form>
+              <div class="flex items-center">
+                <input
+                  id="default-radio-1"
+                  type="radio"
+                  value=""
+                  name="default-radio"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label
+                  for="default-radio-1"
+                  class="ms-2 text-sm font-medium text-gray-900"
+                  >Géométrie</label
+                >
+              </div>
+              <div class="flex items-center">
+                <input
+                  checked
+                  id="default-radio-2"
+                  type="radio"
+                  value=""
+                  name="default-radio"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label
+                  for="default-radio-2"
+                  class="ms-2 text-sm font-medium text-gray-900"
+                  >Mathématiques</label
+                >
+              </div>
+              <div class="flex items-center">
+                <input
+                  checked
+                  id="default-radio-2"
+                  type="radio"
+                  value=""
+                  name="default-radio"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label
+                  for="default-radio-2"
+                  class="ms-2 text-sm font-medium text-gray-900"
+                  >Histoire</label
+                >
+              </div>
+              <div class="flex items-center">
+                <input
+                  checked
+                  id="default-radio-2"
+                  type="radio"
+                  value=""
+                  name="default-radio"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label
+                  for="default-radio-2"
+                  class="ms-2 text-sm font-medium text-gray-900"
+                  >Culture Générale</label
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
